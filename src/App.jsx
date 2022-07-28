@@ -1,9 +1,13 @@
-import ProductsContainer from "./components/ProductsContainer";
+import Header from "./components/Header";
+import ProductsList from "./components/ProductsList";
+import Global from "./styles/global";
 
 function App() {
   return (
     <div>
-      <ProductsContainer />
+      <Global />
+      <Header />
+      <ProductsList />
     </div>
   );
 }

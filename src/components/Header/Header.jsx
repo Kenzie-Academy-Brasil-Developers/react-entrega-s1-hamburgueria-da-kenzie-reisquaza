@@ -1,7 +1,7 @@
 import Container from "../../styles/container";
-import { HeaderMain, HeaderSearch } from "./style";
+import HeaderMain from "./style";
 
-const Header = () => {
+const Header = ({ children }) => {
   return (
     <HeaderMain>
       <Container>
@@ -9,10 +9,8 @@ const Header = () => {
           <h1>Burger</h1>
           <h3>Kenzie</h3>
         </div>
-        <HeaderSearch action="">
-          <input type="text" placeholder="Digitar pesquisa" />
-          <button> Pesquisar </button>
-        </HeaderSearch>
+
+        {children}
       </Container>
     </HeaderMain>
   );

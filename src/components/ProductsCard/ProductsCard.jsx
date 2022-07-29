@@ -1,3 +1,4 @@
+import { Button } from "../../styles/button";
 import Card from "./style";
 
 const ProductsCard = ({ cart, setCart, id, name, category, price, img }) => {
@@ -21,7 +22,7 @@ const ProductsCard = ({ cart, setCart, id, name, category, price, img }) => {
         <h3>{name.substring(0, 18)}</h3>
         <p>{category}</p>
         <span>R$ {price.toFixed(2)}</span>
-        <button onClick={() => addCart()}>Adicionar</button>
+        <Button onClick={() => addCart()}>Adicionar</Button>
       </div>
     </Card>
   );

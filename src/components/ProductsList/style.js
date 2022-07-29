@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const List = styled.ul`
+export const List = styled.ul`
   width: 65%;
   display: flex;
   align-items: center;
@@ -11,4 +11,7 @@ const List = styled.ul`
  
 `;
 
-export default List;
+export const Result = styled.h2`
+  display: flex;
+  justify-content: space-between;
+`

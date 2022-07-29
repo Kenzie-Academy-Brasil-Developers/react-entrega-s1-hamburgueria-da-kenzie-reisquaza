@@ -1,14 +1,13 @@
-import { useState } from "react";
+/* eslint-disable array-callback-return */
 import { Button } from "../../styles/button";
 import Filter from "./style";
 
-const ProductsFilter = ({ products, setFilterProducts }) => {
-  const [value, setValue] = useState("");
-  const isEmpty = (str) => !str.trim().length;
+const ProductsFilter = ({ products, setFilterProducts, value, setValue }) => {
+  const isEmpty = () => !value.trim().length;
 
-  function searchProduct() {
-    if (isEmpty(value)) {
-      setFilterProducts(products);
+  const searchProduct = (e) => {
+    if (isEmpty()) {
+      setFilterProducts([]);
     } else {
       const searchValue = value
         .normalize("NFD")
@@ -36,19 +35,22 @@ const ProductsFilter = ({ products, setFilterProducts }) => {
 
       setFilterProducts(productFilter);
     }
-  }
+  };
 
   return (
-    <Filter>
+    <Filter
+      onSubmit={(e) => {
+        e.preventDefault();
+        searchProduct();
+      }}
+    >
       <input
         type="text"
         placeholder="Digitar pesquisa"
         onChange={(e) => setValue(e.target.value)}
       />
 
-      <Button type="button" onClick={() => searchProduct()}>
-        Pesquisar
-      </Button>
+      <Button>Pesquisar</Button>
     </Filter>
   );
 };

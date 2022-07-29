@@ -1,13 +1,15 @@
+import CartCard from "./style";
+
 const ProductsCardCart = ({ img, name, category, removeCart, id }) => {
   return (
-    <li>
+    <CartCard>
       <img src={img} alt={name} />
       <div>
-        <h3>{name}</h3>
+        <h4>{name}</h4>
         <p>{category}</p>
       </div>
       <button onClick={() => removeCart(id)}>Remover</button>
-    </li>
+    </CartCard>
   );
 };
 

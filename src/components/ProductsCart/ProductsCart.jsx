@@ -9,18 +9,21 @@ const ProductsCart = ({ cart, setCart }) => {
 
   return (
     <Cart>
-      {cart.map(({ id, name, category, img }) => {
-        return (
-          <ProductsCardCart
-            key={id}
-            id={id}
-            name={name}
-            category={category}
-            img={img}
-            removeCart={removeProduct}
-          />
-        );
-      })}
+      <h3>Carrinho de compras</h3>
+      <div>
+        {cart.map(({ id, name, category, img }) => {
+          return (
+            <ProductsCardCart
+              key={id}
+              id={id}
+              name={name}
+              category={category}
+              img={img}
+              removeCart={removeProduct}
+            />
+          );
+        })}
+      </div>
     </Cart>
   );
 };

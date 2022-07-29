@@ -1,14 +1,27 @@
 import Card from "./style";
 
-const ProductsCard = ({ addCart, name, category, price, img }) => {
+const ProductsCard = ({ cart, setCart, id, name, category, price, img }) => {
+  const addCart = () => {
+    const getProductId = cart.length + 1;
+    const product = {
+      id: getProductId,
+      name: name,
+      category: category,
+      price: price,
+      img: img,
+    };
+
+    setCart((oldProduct) => [...oldProduct, product]);
+  };
+
   return (
     <Card>
       <img src={img} alt={name} />
       <div>
-        <h3>{name.substring(0,18)}</h3>
+        <h3>{name.substring(0, 18)}</h3>
         <p>{category}</p>
         <span>R$ {price.toFixed(2)}</span>
-        <button onClick={addCart}>Adicionar</button>
+        <button onClick={() => addCart()}>Adicionar</button>
       </div>
     </Card>
   );

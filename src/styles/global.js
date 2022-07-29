@@ -62,17 +62,7 @@ export default createGlobalStyle`
     color: var(--color-gray-50);
   }
   button {
-    height: 40px;
-    width: 106px;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--color-primary);
-    color: var(--color-gray-0);
     cursor: pointer;
-  }
-
-  button:hover{
-    background-color: var(--color-primary-50);
   }
   /* width */
   ::-webkit-scrollbar {

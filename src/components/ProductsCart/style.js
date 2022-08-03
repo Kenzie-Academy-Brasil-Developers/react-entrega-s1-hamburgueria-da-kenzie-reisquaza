@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Cart = styled.ul`
-  width: 32%;
+  width: 97%;
   max-height: 450px;
-  margin-left: 10px;
+  margin-top: 10px;
 
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@ export const Cart = styled.ul`
   div {
     margin-top: 10px;
   }
-  
+
   h3 {
     width: 100%;
     padding: 15px;
@@ -34,11 +34,17 @@ export const Cart = styled.ul`
     text-align: center;
   }
 
+
   @media screen and (min-width: 768px) {
+    margin-top: 6px;
+    margin-left: 6px;
     width: 45%;
   }
   @media screen and (min-width: 1024px) {
     width: 40%;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 33%;
   }
 `;
 

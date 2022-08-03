@@ -6,6 +6,7 @@ const CartCard = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
 
   img {
     margin: 5px;

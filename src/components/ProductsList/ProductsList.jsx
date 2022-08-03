@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 import ProductsCard from "../ProductsCard";
 import Container from "../../styles/container";
-import { List, Result } from "./style";
 import ProductsCart from "../ProductsCart";
 import Header from "../Header";
 import ProductsFilter from "../ProductsFilter";
+import List from "./style";
 
 const ProductsList = () => {
   const [products, setProducts] = useState([]);
@@ -46,11 +46,7 @@ const ProductsList = () => {
               );
             })
           ) : (
-            <div>
-              <Result>
-                Resultado para: <p> {value} </p>{" "}
-              </Result>
-
+            <>
               {filterProducts.map((product) => {
                 return (
                   <ProductsCard
@@ -63,7 +59,7 @@ const ProductsList = () => {
                   />
                 );
               })}
-            </div>
+            </>
           )}
         </List>
 

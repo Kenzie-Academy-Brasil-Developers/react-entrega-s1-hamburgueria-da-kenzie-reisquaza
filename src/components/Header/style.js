@@ -7,7 +7,7 @@ width: 100vw;
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-gray-20);
-  height: 80px;
+  height: 90px;
 
   div {
     display: flex;
@@ -19,6 +19,8 @@ width: 100vw;
     margin: 10px 3px 0 3px;
     color: var(--color-secondary);
   }
+
+ 
 `;
 
 export default HeaderMain;
